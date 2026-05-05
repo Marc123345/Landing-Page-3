@@ -73,9 +73,7 @@ body {
 
 .hero h1 .accent { color: var(--primary); }
 
-.form-embed { width: 100%; min-height: 520px; }
-.form-embed iframe { display: block; width: 100% !important; min-width: 100% !important; min-height: inherit; border: 0; }
-#JotFormIFrame-261243265404147 { width: 100% !important; min-width: 100% !important; }
+.form-embed { width: 100%; }
 
 .footer-strip {
   position: relative;
