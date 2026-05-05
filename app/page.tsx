@@ -7,7 +7,7 @@ export default function LandingPage() {
     const container = document.getElementById("jotform-container");
     if (!container) return;
     const script = document.createElement("script");
-    script.src = "https://form.jotform.com/jsform/261243265404147";
+    script.src = "https://form.jotform.com/jsform/261243544700045";
     script.type = "text/javascript";
     container.appendChild(script);
     return () => { script.remove(); };
