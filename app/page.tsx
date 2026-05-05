@@ -28,23 +28,25 @@ export default function LandingPage() {
         <div className="hero-bg" />
         <div className="hero-overlay" />
 
-        <span className="hero-eyebrow">Free Roof Assessment</span>
-        <h1>
-          Restore Your Roof for <span className="accent">75% Less</span>{" "}
-          with a Roof Coating.
-        </h1>
+        <div className="hero-content">
+          <span className="hero-eyebrow">Free Roof Assessment</span>
+          <h1>
+            Restore Your Roof for <span className="accent">75% Less</span>{" "}
+            with a Roof Coating.
+          </h1>
 
-        <div className="form-embed">
-          <iframe
-            id="JotFormIFrame-261243265404147"
-            title="Roof Coating Deal Request"
-            onLoad={() => window.parent.scrollTo(0, 0)}
-            allowTransparency={true}
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261243265404147?isIframeEmbed=1"
-            frameBorder={0}
-            scrolling="no"
-          />
+          <div className="form-embed">
+            <iframe
+              id="JotFormIFrame-261243265404147"
+              title="Roof Coating Deal Request"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261243265404147?isIframeEmbed=1"
+              frameBorder={0}
+              scrolling="no"
+            />
+          </div>
         </div>
 
         <div className="footer-strip">
