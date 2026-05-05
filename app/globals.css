@@ -104,6 +104,8 @@ body {
 }
 
 @media (max-width: 640px) {
-  .hero-card { padding: 30px 20px 26px; border-radius: 10px; }
+  .hero { min-height: auto; padding: 28px 16px; }
+  .hero-card { padding: 28px 20px 24px; border-radius: 10px; }
   .hero-card h1 { font-size: 20px; }
+  .footer-strip { margin-top: 16px; }
 }
