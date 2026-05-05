@@ -33,21 +33,6 @@ export default function LandingPage() {
             property may qualify — take the free 30-second quiz below.
           </p>
 
-          <div className="trust-row">
-            <div className="trust-stars">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="trust-facts">
-              <span><strong>4.9/5</strong> on Google</span>
-              <span><strong>1,200+</strong> Roofs Coated</span>
-              <span><strong>20-yr</strong> Warranty</span>
-            </div>
-          </div>
-
           <div className="form-wrap">
             <iframe
               id="JotFormIFrame-261243265404147"
