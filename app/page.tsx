@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 export default function LandingPage() {
   useEffect(() => {
+    let obs: MutationObserver | null = null;
     const script = document.createElement("script");
     script.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
     script.onload = () => {
@@ -11,9 +12,14 @@ export default function LandingPage() {
         "iframe[id='JotFormIFrame-261243265404147']",
         "https://form.jotform.com/"
       );
+      const iframe = document.getElementById("JotFormIFrame-261243265404147") as HTMLElement | null;
+      if (iframe) {
+        obs = new MutationObserver(() => { if (iframe.style.height) iframe.style.height = ""; });
+        obs.observe(iframe, { attributes: true, attributeFilter: ["style"] });
+      }
     };
     document.body.appendChild(script);
-    return () => { script.remove(); };
+    return () => { script.remove(); obs?.disconnect(); };
   }, []);
 
   return (
@@ -33,7 +39,7 @@ export default function LandingPage() {
             property may qualify — take the free 30-second quiz below.
           </p>
 
-          <div className="form-wrap">
+          <div className="form-embed">
             <iframe
               id="JotFormIFrame-261243265404147"
               title="Roof Coating Deal Request"
@@ -42,7 +48,6 @@ export default function LandingPage() {
               allow="geolocation; microphone; camera; fullscreen; payment"
               src="https://form.jotform.com/261243265404147?isIframeEmbed=1"
               frameBorder={0}
-              style={{ border: "none" }}
               scrolling="no"
             />
           </div>

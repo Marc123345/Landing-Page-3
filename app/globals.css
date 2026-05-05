@@ -78,9 +78,9 @@ body {
   margin-bottom: 14px;
 }
 
-.form-wrap { width: 100%; }
-.form-wrap iframe { display: block; width: 100%; min-width: 100%; border: none; }
-#JotFormIFrame-261243265404147 { width: 100% !important; min-width: 100% !important; height: 520px; }
+.form-embed { width: 100%; min-height: 520px; }
+.form-embed iframe { display: block; width: 100% !important; min-width: 100% !important; min-height: inherit; border: 0; }
+#JotFormIFrame-261243265404147 { width: 100% !important; min-width: 100% !important; }
 
 .footer-strip {
   position: relative;
@@ -109,5 +109,8 @@ body {
   .hero-card h1 { font-size: 1.5rem; }
   .hero-sub { font-size: 0.9rem; }
   .footer-strip { margin-top: 16px; }
-  #JotFormIFrame-261243265404147 { height: 460px !important; }
+  .form-embed { min-height: 460px; }
+}
+@media (max-width: 480px) {
+  .form-embed { min-height: 400px; }
 }
