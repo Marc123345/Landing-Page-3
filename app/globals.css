@@ -96,6 +96,7 @@ body {
 
 .form-wrap { width: 100%; }
 .form-wrap iframe { display: block; width: 100%; min-width: 100%; border: none; }
+#JotFormIFrame-261243265404147 { width: 100% !important; min-width: 100% !important; }
 
 .footer-strip {
   position: relative;
