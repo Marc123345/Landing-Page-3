@@ -1,65 +1,74 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useEffect } from "react";
+
+export default function LandingPage() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    script.onload = () => {
+      (window as any).jotformEmbedHandler(
+        "iframe[id='JotFormIFrame-261243265404147']",
+        "https://form.jotform.com/"
+      );
+    };
+    document.body.appendChild(script);
+    return () => { script.remove(); };
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <section className="hero">
+        <div className="hero-bg" />
+        <div className="hero-overlay" />
+
+        <div className="hero-card">
+          <span className="hero-eyebrow">Free Roof Assessment</span>
+          <h1>
+            Restore Your Roof for <span className="accent">75% Less</span>{" "}
+            with a Roof Coating.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-sub">
+            Seal every leak, save 75%, and get a 20-year warranty. Your commercial
+            property may qualify — take the free 30-second quiz below.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          <div className="trust-row">
+            <div className="trust-stars">
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+              <i className="fas fa-star" />
+            </div>
+            <div className="trust-facts">
+              <span><strong>4.9/5</strong> on Google</span>
+              <span><strong>1,200+</strong> Roofs Coated</span>
+              <span><strong>20-yr</strong> Warranty</span>
+            </div>
+          </div>
+
+          <div className="form-wrap">
+            <iframe
+              id="JotFormIFrame-261243265404147"
+              title="Roof Coating Deal Request"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/261243265404147?isIframeEmbed=1"
+              frameBorder={0}
+              style={{ height: 520, border: "none" }}
+              scrolling="no"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+
+        <div className="footer-strip">
+          © 2026 All Rights Reserved &nbsp;·&nbsp;
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </section>
+    </>
   );
 }
