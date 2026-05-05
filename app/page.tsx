@@ -42,7 +42,7 @@ export default function LandingPage() {
               allow="geolocation; microphone; camera; fullscreen; payment"
               src="https://form.jotform.com/261243265404147?isIframeEmbed=1"
               frameBorder={0}
-              style={{ height: 520, border: "none" }}
+              style={{ border: "none" }}
               scrolling="no"
             />
           </div>
