@@ -105,7 +105,9 @@ body {
 
 @media (max-width: 640px) {
   .hero { min-height: auto; padding: 28px 16px; }
-  .hero-card { padding: 28px 20px 24px; border-radius: 10px; }
-  .hero-card h1 { font-size: 20px; }
+  .hero-card { padding: 20px 15px; border-radius: 10px; }
+  .hero-card h1 { font-size: 1.5rem; }
+  .hero-sub { font-size: 0.9rem; }
   .footer-strip { margin-top: 16px; }
+  #JotFormIFrame-261243265404147 { height: 460px !important; }
 }
